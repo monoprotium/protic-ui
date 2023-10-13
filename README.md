@@ -4,4 +4,4 @@
 
 
 
-<img src="assets/logo.png" alt="Logo" width="240" height="240">
+<img src="assets/logo.png" alt="Logo" width="120" height="120">

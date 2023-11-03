@@ -1,6 +1,6 @@
-# PROTIC UI
+# PROTOBIONT UI
 
-## Vue.js UI component library
+## Vue.js UI library for prototyping and beyond.
 
 
 

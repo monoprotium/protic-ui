@@ -1,6 +1,9 @@
 import type { Meta, StoryFn } from '@storybook/vue3';
 import PrtBtn from './PrtBtn.vue';
+import PrtIcon from '../icon/PrtIcon.vue';
+
 import { PrtBtnSize, PrtBtnVariant } from './types';
+
 
 const meta: Meta<typeof PrtBtn> = {
   title: 'Components/PrtBtn',
@@ -174,4 +177,62 @@ FullWidthButton.args = {
   default: 'Full Width Button',
 };
 
+//  Prepend icon Story
+export const WithPrependIcon = Template.bind({});
+WithPrependIcon.args = {
+  default: 'Click me',
+};
+WithPrependIcon.decorators = [
+  (story) => ({
+    components: { PrtBtn, PrtIcon, story },
+    template: `
+      <PrtBtn>
+        <template #prepend>
+          <PrtIcon class="mt-1 mr-2" size="base" iconComponent="accept" desc="Accept" />
+        </template>
+        Click me
+      </PrtBtn>
+    `,
+  }),
+];
 
+//  append icon Story
+export const WithAppendIcon = Template.bind({});
+WithAppendIcon.args = {
+  default: 'Click me',
+};
+WithAppendIcon.decorators = [
+  (story) => ({
+    components: { PrtBtn, PrtIcon, story },
+    template: `
+      <PrtBtn>
+        Click me
+        <template #append>
+          <PrtIcon class="mt-1 ml-2" size="base" iconComponent="x" desc="Cancel" />
+        </template>
+      </PrtBtn>
+    `,
+  }),
+];
+
+// Prepend and append icons Story
+export const WithBothIcons = Template.bind({});
+WithBothIcons.args = {
+  default: 'Click me',
+};
+WithBothIcons.decorators = [
+  (story) => ({
+    components: { PrtBtn, PrtIcon, story },
+    template: `
+      <PrtBtn>
+        <template #prepend>
+          <PrtIcon class="mt-1 mr-2" size="base" iconComponent="accept" desc="Accept" />
+        </template>
+        Click me
+        <template #append>
+          <PrtIcon class="mt-1 ml-2" size="base" iconComponent="x" desc="Cancel" />
+        </template>
+      </PrtBtn>
+    `,
+  }),
+];

@@ -2,8 +2,8 @@
 import 'virtual:uno.css'
 
 // Atoms
-import {PrtBtn} from './components/ui/atoms/btn/index.ts';
-
+import { PrtBtn } from './components/ui/atoms/btn/index.ts';
+import { PrtIcon } from './components/ui/atoms/icon/index.ts';
 
 // Molecules
 
@@ -12,5 +12,5 @@ import {PrtBtn} from './components/ui/atoms/btn/index.ts';
 
 export {
   PrtBtn,
-
+  PrtIcon
 };

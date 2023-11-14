@@ -27,6 +27,7 @@
     "build:ui": "cd packages/vue && bun run build-lib",
     "build": "cd packages/vue && bun run build-lib",
     "build:app": "cd packages/vue && bun run build",
+    "test:ui": "cd packages/vue && bun run test:update",
     "dev:ui": "cd packages/vue && bun run dev",
     "dev": "cd packages/vue && bun run dev",
     "dev:docs": "cd apps/docs && bun run docs:dev",

@@ -1,0 +1,43 @@
+{
+  "name": "protium-ui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "apps/docs/*",
+      "apps/preview/*",
+      "apps/test/*",
+      "apps/shared",
+      "packages/*",
+      "packages/config/*",
+      "packages/vue/*",
+      "packages/prt/frameworks/*"
+    ]
+  },
+
+  "scripts": {
+    "release":  "cd packages/vue && bun run release",
+    "dev:storybook": "cd packages/vue && bun run storybook",
+    "build:storybook": "cd packages/vue && bun run build-storybook",
+    "test:storybook": "cd packages/vue && bun run test-storybook",
+    "preview:ui": "cd packages/vue && bun run preview",
+    "build:ui": "cd packages/vue && bun run build-lib",
+    "build": "cd packages/vue && bun run build-lib",
+    "build:app": "cd packages/vue && bun run build",
+    "dev:ui": "cd packages/vue && bun run dev",
+    "dev": "cd packages/vue && bun run dev",
+    "dev:docs": "cd apps/docs && bun run docs:dev",
+    "build:docs": "cd apps/docs && bun run docs:build",
+    "preview:docs": "cd apps/docs && bun run docs:preview"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^7.0.2",
+    "release-it": "^16.2.1"
+  }
+}

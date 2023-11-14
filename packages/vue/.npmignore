@@ -1,0 +1,6 @@
+# .npmignore
+# ignore everything
+/*
+
+# except the dist folder
+!/dist/
